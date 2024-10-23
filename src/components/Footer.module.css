@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 50px 10px 50px;
+  background-color: rgb(18, 36, 62);
+  color: rgb(236, 236, 236);
+  ul {
+    list-style-type: none;
+    padding-left: 0; /* Optional: Remove default padding */
+    margin: 0; /* Optional: Remove default margin */
+  }
+  li{
+    margin: 3px 5px 0px 0px;
+    color:rgb(209, 208, 208);
+  }
+  .linkStyle{
+    margin: 3px 5px 0px 0px;
+    color:rgb(209, 208, 208);
+  }
+}

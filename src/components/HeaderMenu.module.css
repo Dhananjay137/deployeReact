@@ -1,0 +1,40 @@
+.menu{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 80vw;
+  font-size: 25px;
+  input{
+    height: 30px;
+    width: 500px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0px 5px;
+  }
+  button{
+    height: 34px;
+    width: 34px;
+    background-color: gainsboro;
+    border: 1px solid gray;
+    margin-left: 2px;
+    border-radius: 5px;
+  }
+  button:hover{
+    background-color: white;
+  }
+  strong{
+ 
+    padding: 3px 6px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  strong:hover{
+    background-color: gainsboro;
+  }
+}
+.c{
+  margin-right: 20px;
+  font-weight: 400;
+}
