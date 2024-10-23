@@ -15,12 +15,12 @@ import AddProduct from './components/AddProduct.jsx'
 const router = createBrowserRouter([{
   path: "/", element: <App />, children:[
     {path: "/", element: <MainDisplay />},
-    {path: "/cart-area", element: <CartItems />},
-    {path: "/login", element: <Login />},
-    {path: "/register", element: <Register />},
-    {path: "/PaymentBox", element: <PaymentBox />},
-    {path: "/Order", element: <OrderItems/>},
-    {path: "/AddProduct", element: <AddProduct/>}
+    {path: "cart-area", element: <CartItems />},
+    {path: "login", element: <Login />},
+    {path: "register", element: <Register />},
+    {path: "PaymentBox", element: <PaymentBox />},
+    {path: "Order", element: <OrderItems/>},
+    {path: "AddProduct", element: <AddProduct/>}
   ]
 }], { basename: "/deployeReact" });
 
