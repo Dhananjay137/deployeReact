@@ -1,7 +1,7 @@
 {
   "name": "ecommercewebsite-frontend",
-  "private": true,
   "homepage": "https://Dhananjay137.github.io/deployeReact",
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
