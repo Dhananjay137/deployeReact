@@ -27,7 +27,7 @@ const router = createBrowserRouter([{
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={ecomWeb}>
-    <RouterProvider router={router} />
+    <RouterProvider basename="/deployeReact" router={router} />
     </Provider>
   </StrictMode>,
 )
