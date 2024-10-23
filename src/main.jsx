@@ -22,12 +22,12 @@ const router = createBrowserRouter([{
     {path: "/Order", element: <OrderItems/>},
     {path: "/AddProduct", element: <AddProduct/>}
   ]
-}]);
+}], { basename: "/deployeReact" });
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={ecomWeb}>
-    <RouterProvider basename="/deployeReact" router={router} />
+    <RouterProvider router={router} />
     </Provider>
   </StrictMode>,
 )
