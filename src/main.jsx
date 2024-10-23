@@ -13,8 +13,8 @@ import OrderItems from './components/OrderItems.jsx'
 import AddProduct from './components/AddProduct.jsx'
 
 const router = createBrowserRouter([{
-  path: "/", element: <App />, children:[
-    {path: "/", element: <MainDisplay />},
+  path: "/deployeReact", element: <App />, children:[
+    {path: "/deployeReact", element: <MainDisplay />},
     {path: "/cart-area", element: <CartItems />},
     {path: "/login", element: <Login />},
     {path: "/register", element: <Register />},
