@@ -1,7 +1,7 @@
 {
   "name": "ecommercewebsite-frontend",
-  "homepage": "https://Dhananjay137.github.io/deployeReact",
-  "private": false,
+  "homepage": "https://Dhananjay137.github.io/deployeReact/",
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@babel/runtime": "^7.25.7",
