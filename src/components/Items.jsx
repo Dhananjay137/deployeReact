@@ -31,12 +31,12 @@ const Items = () => {
         dispatch(fetchAction.setUpdating(true))
 
         // Fetch Braintree client token from backend
-        const response = await fetch("http://localhost:8080/api/payment/token");
+        const response = await fetch("https://deployespringboot.onrender.com/api/payment/token");
         const token = await response.text();
 
         // Fetch Product Details from backend
         const response2 = await fetch(
-          `http://localhost:8080/api/getProductById/${productId}`
+          `https://deployespringboot.onrender.com/api/getProductById/${productId}`
         );
         const productDetail = await response2.json();
 
