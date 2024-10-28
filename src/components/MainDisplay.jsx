@@ -6,7 +6,6 @@ const MainDisplay = () => {
   return (
     <main className="main">
       <Items></Items>
-
     </main>
   );
 };

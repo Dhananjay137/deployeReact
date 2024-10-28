@@ -15,6 +15,10 @@ const Sidebar = () => {
 
   const [money, setMoney] = useState(50);
 
+  const handleOnAddData = () => {
+    navigate("/AddProduct")
+  }
+  
   const handleRangeChange = () => {
     setMoney(moneyRange.current.value);
   };
@@ -24,7 +28,7 @@ const Sidebar = () => {
   };
 
   const handleGoToHome = () => {
-    fetch("http://localhost:8080/api/products")
+    fetch("https://deployespringboot.onrender.com/api/products")
       .then((response) => response.json())
       .then((data) => dispatch(searchAction.setAllItems({ data })))
       .catch((error) => console.log(error));
@@ -81,6 +85,7 @@ const Sidebar = () => {
           </div>
         </li>
         {userDetails && <li className={styles.list} onClick={handleOnLogOut}><h3>log Out</h3></li>}
+        {userDetails && userDetails.userType && <li className={styles.list} onClick={handleOnAddData}><h3>Add Data</h3></li>}
         
       </ul>
     </div>

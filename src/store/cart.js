@@ -5,7 +5,7 @@ export const removeFromCartAsync = createAsyncThunk(
   async (cartId, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/cart/removeFromCart/${cartId}`
+        `https://deployespringboot.onrender.com/cart/removeFromCart/${cartId}`
       );
 
       const res = await response.json();
@@ -23,7 +23,7 @@ export const addToCartAsync = createAsyncThunk(
   "cart/addToCartAsync",
   async (productData, { rejectWithValue }) => {
     try {
-      const response = await fetch("http://localhost:8080/cart/addToCart", {
+      const response = await fetch("https://deployespringboot.onrender.com/cart/addToCart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(productData),
@@ -44,7 +44,7 @@ export const getToCartAsync = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/cart/getAllFromCart/${userId}`,
+        `https://deployespringboot.onrender.com/cart/getAllFromCart/${userId}`,
         {
           method: "GET",
         }

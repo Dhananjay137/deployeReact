@@ -5,7 +5,7 @@ export const registerAsync = createAsyncThunk("customer/registerAsync",
   async(userData, { rejectWithValue }) => {
 
     try{
-      const response = await fetch("http://localhost:8080/user/register",{
+      const response = await fetch("https://deployespringboot.onrender.com/user/register",{
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
@@ -26,7 +26,7 @@ export const loginAsync = createAsyncThunk("customer/loginAsync",
     formData.append('email',loginData.EMAIL) ;
     formData.append('password', loginData.PASSWORD);
     try{
-      const response = await fetch("http://localhost:8080/user/login",
+      const response = await fetch("https://deployespringboot.onrender.com/user/login",
         {
           method: "POST",
           body: formData,

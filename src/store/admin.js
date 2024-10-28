@@ -14,7 +14,7 @@ export const addProductAsync = createAsyncThunk("admin/addProductAsync",
     formData.append('IMAGE', product.IMAGE);  // Assuming `product.IMAGE` is a File object
 
       try {
-        const response = await fetch("http://localhost:8080/api/addProduct", {
+        const response = await fetch("https://deployespringboot.onrender.com/api/addProduct", {
           method: "POST",
           body: formData,
         });

@@ -45,7 +45,7 @@ const Item = ({ item, handleOnBuy }) => {
   <>
   <div className="item-card">
     <img
-      src={`images/${item.imagePath}`}
+      src={item.imagePath}
       alt="image"
       className="item-image"
     />

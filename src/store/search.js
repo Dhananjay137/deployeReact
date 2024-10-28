@@ -5,7 +5,7 @@ import { act } from 'react';
 export const handleIncAndDec = createAsyncThunk('search/handleIncAndDec',
   async (object, { rejectWithValue }) => {
     try{
-      const response = await fetch("http://localhost:8080/api/increaseAndDecressBuyQun", {
+      const response = await fetch("https://deployespringboot.onrender.com/api/increaseAndDecressBuyQun", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ export const handleIncAndDec = createAsyncThunk('search/handleIncAndDec',
 export const fetchSearchResults = createAsyncThunk(
   'search/fetchSearchResults',
   async (searchTerm) => {
-    const response = await fetch(`http://localhost:8080/api/search/${searchTerm}`);
+    const response = await fetch(`https://deployespringboot.onrender.com/api/search/${searchTerm}`);
     const data = await response.json();
     return data;
   }
@@ -32,7 +32,7 @@ export const fetchSearchResults = createAsyncThunk(
 
 export const fetchFilterResult = createAsyncThunk('search/fetchFilterResult',
   async (price) => {
-    const response = await fetch(`http://localhost:8080/api/range/${price}`);
+    const response = await fetch(`https://deployespringboot.onrender.com/api/range/${price}`);
     const data = await response.json();
     return data;
   }

@@ -30,7 +30,7 @@ const PaymentBox = () => {
       
       // Call backend API to process the payment
       const response = await fetch(
-        "http://localhost:8080/api/payment/checkout",
+        "https://deployespringboot.onrender.com/api/payment/checkout",
         {
           method: "POST",
           headers: {

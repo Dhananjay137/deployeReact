@@ -5,7 +5,7 @@ export const getAllOrderByUserId = createAsyncThunk(
   async (userId, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/payment/getAllOrderByUserId/${userId}`
+        `https://deployespringboot.onrender.com/api/payment/getAllOrderByUserId/${userId}`
       );
       const res = await response.json();
       return res;
@@ -22,7 +22,7 @@ export const addOrder = createAsyncThunk(
   async (orderDetail, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `http://localhost:8080/api/payment/addOrder`,
+        `https://deployespringboot.onrender.com/api/payment/addOrder`,
         {
           method: "POST", // Specify POST method
           headers: {

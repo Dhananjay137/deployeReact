@@ -39,7 +39,7 @@ const CartItem = ({ item ,handleRemoveFromCart, handleOnBuy}) => {
   return (<>
 
   <div className="item-card">
-  <img src={`images/${item.imagePath}`} alt="image" className="item-image" />
+  <img src={item.imagePath} alt="image" className="item-image" />
   <p>Name: {item.productName}</p>
   <p>Prize: ${item.price}</p>
   <strong style={{color: "green"}}>In stock</strong>

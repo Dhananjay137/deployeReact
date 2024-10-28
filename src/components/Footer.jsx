@@ -17,6 +17,7 @@ const Footer = () => {
           <li>React (HTML | CSS | JS)</li>
           <li>React Icons</li>
           <li>Redux</li>
+          <li>Cloudinary</li>
           <li>Braintree Payment Gateway</li>
           <li>Spring Boot</li>
           <li>MySQL</li>

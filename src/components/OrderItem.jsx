@@ -6,7 +6,7 @@ const OrderItem = ({order}) => {
   return <>
       <div className="item-card">
       <img
-        src={`images/${order.imagePath}`}
+        src={order.imagePath}
         alt="image"
         className="item-image"
       />

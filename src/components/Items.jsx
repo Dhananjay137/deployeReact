@@ -15,7 +15,7 @@ const Items = () => {
   const { allItems } = useSelector((state) => state.search);
   useEffect(() => {
     dispatch(fetchAction.setUpdating(true))
-    fetch("http://localhost:8080/api/products")
+    fetch("https://deployespringboot.onrender.com/api/products")
       .then((response) => response.json())
       .then((data) => dispatch(searchAction.setAllItems({ data })))
       .catch((error) => console.log(error))
