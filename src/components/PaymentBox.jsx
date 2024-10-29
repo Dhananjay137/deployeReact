@@ -25,7 +25,6 @@ const PaymentBox = () => {
       Number(productDetails.price) * Number(productDetails.buyQuantity); // Get the item price for the transaction
 
     try {
-      console.log(instance)
       const { nonce } = await instance.requestPaymentMethod(); // Get payment method nonce from Braintree UI
       
       // Call backend API to process the payment
