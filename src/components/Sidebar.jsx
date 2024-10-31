@@ -11,12 +11,12 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const moneyRange = useRef(null);
-  const { userDetails, setAddDataComponentToTrue } = useSelector((state) => state.customer);
+  const { userDetails } = useSelector((state) => state.customer);
 
   const [money, setMoney] = useState(50);
 
   const handleOnAddData = () => {
-    setAddDataComponentToTrue()
+    dispatch(customerAction.setAddDataComponentToTrue())
     navigate("/AddProduct")
   }
   
