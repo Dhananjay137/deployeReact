@@ -16,7 +16,7 @@ const CartItems = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (userDetails) {
+    if (!userDetails) {
       navigate("/login");
     } else {
       dispatch(fetchAction.setUpdating(true));
