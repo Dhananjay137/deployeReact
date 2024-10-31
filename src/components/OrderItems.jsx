@@ -15,8 +15,6 @@ const OrderItems = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // checking
-    console.log(userDetails);
     const storedUserId = localStorage.getItem('userId')
     if (!storedUserId) {
       navigate("/login");

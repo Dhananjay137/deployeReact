@@ -18,7 +18,8 @@ const OrderItem = ({order}) => {
       <p>Paid Amount: ${order.quantity * order.amount}</p>
       
       <strong style={{color: "green",marginTop: "7px"}}>Orders will be delivered within 2-3 days.</strong>
-      <p style={{color: "rgb(8, 18, 43)"}}><IoLocationSharp color="rgb(8, 18, 43)"/>{userDetails.address}</p>
+      {userDetails && (<p style={{color: "rgb(8, 18, 43)"}}><IoLocationSharp color="rgb(8, 18, 43)"/>{userDetails.address}</p>)}
+      
       </div>
   </>
 }
