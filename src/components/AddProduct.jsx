@@ -20,8 +20,10 @@ const AddProduct = () => {
     event.preventDefault();
 
     useEffect(() => {
+      console.log("out of if")
       if(!isAddDataComponent){
         navigate("/AddProduct")
+        console.log("in if")
       }
     })
 
