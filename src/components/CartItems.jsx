@@ -20,8 +20,9 @@ const CartItems = () => {
     if (!userDetails) {
       navigate("/login");
     } else {
+      const storedUserId = localStorage.getItem('userId')
       dispatch(fetchAction.setUpdating(true));
-        dispatch(getToCartAsync(userDetails.userId))
+        dispatch(getToCartAsync(storedUserId))
         .finally(() => {
           dispatch(fetchAction.setUpdating(false))
         })

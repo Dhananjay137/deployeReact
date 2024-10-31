@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addProductAsync, adminAction } from "../store/admin";
 import { useNavigate } from "react-router-dom";
@@ -13,10 +13,17 @@ const AddProduct = () => {
   const inputQuantity = useRef();
   const inputColor = useRef();
   const inputImage = useRef(null);
-  const {userDetails} = useSelector(state => state.customer)
+  const {userDetails, isAddDataComponent} = useSelector(state => state.customer)
 
   const handleOnSubmit = (event) => {
+    const navigate = useNavigate();
     event.preventDefault();
+
+    useEffect(() => {
+      if(!isAddDataComponent){
+        navigate("/AddProduct")
+      }
+    })
 
     const name = inputProductName.current.value
     const dis= inputDescription.current.value

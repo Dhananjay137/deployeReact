@@ -52,6 +52,7 @@ const customerSlice = createSlice({
     isChange: false,
     msg: null,
     loginData: false,
+    isAddDataComponent: false,
   },
   reducers: {
     register: (state, action) => {
@@ -61,6 +62,9 @@ const customerSlice = createSlice({
 
     },
     buyItem: (state, action) => {
+    },
+    setAddDataComponentToTrue: (state) => {
+      state.isAddDataComponent = true
     },
     sessionDataStore: (state, action) => {
       state.userDetails = action.payload

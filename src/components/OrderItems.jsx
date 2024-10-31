@@ -19,8 +19,9 @@ const OrderItems = () => {
       navigate("/login")
     }
     else{
+      const storedUserId = localStorage.getItem('userId')
       dispatch(fetchAction.setUpdating(true))
-      dispatch(getAllOrderByUserId(userDetails.userId))
+      dispatch(getAllOrderByUserId(storedUserId))
       .finally(() => {
         dispatch(fetchAction.setUpdating(false))
       })
