@@ -20,6 +20,7 @@ const OrderItems = () => {
     if (!userDetails) {
       navigate("/login");
     } else {
+      console.log("hii")
       dispatch(fetchAction.setUpdating(true));
       dispatch(getAllOrderByUserId(userDetails.userId)).finally(() => {
         dispatch(fetchAction.setUpdating(false));

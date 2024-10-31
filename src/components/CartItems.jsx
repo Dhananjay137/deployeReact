@@ -24,7 +24,7 @@ const CartItems = () => {
         dispatch(fetchAction.setUpdating(false));
       });
     }
-  }, [dispatch, navigate, userDetails]);
+  }, [userDetails]);
 
   const handleRemoveFromCart = async (ID) => {
     console.log(ID);
