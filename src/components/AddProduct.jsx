@@ -15,16 +15,16 @@ const AddProduct = () => {
   const inputImage = useRef(null);
   const {userDetails, isAddDataComponent} = useSelector(state => state.customer)
 
+  useEffect(() => {
+    console.log("out of if")
+    if(!isAddDataComponent){
+      navigate("/AddProduct")
+      console.log("in if")
+    }
+  })
+
   const handleOnSubmit = (event) => {
     event.preventDefault();
-
-    useEffect(() => {
-      console.log("out of if")
-      if(!isAddDataComponent){
-        navigate("/AddProduct")
-        console.log("in if")
-      }
-    })
 
     const name = inputProductName.current.value
     const dis= inputDescription.current.value
