@@ -36,7 +36,6 @@ const Sidebar = () => {
   };
   const handleGoToOrder = () => {
     if (userDetails) {
-      
       navigate("/Order");
     } else {
       navigate("/login");

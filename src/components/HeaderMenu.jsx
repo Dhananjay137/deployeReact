@@ -19,8 +19,7 @@ const HeaderMenu = () => {
   const handleOnCart =  () => {
     if(userDetails){
       try{
-      dispatch(getToCartAsync(userDetails.userId));
-      navigate("/cart-area")
+      navigate("/cartArea")
       } catch{
         console.error("error in get cart data !")
       }

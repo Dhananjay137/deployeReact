@@ -51,7 +51,7 @@ const AppRouter = () => (
     <Routes>
       <Route path="/" element={<App />}>
         <Route index element={<MainDisplay />} />
-        <Route path="cart-area" element={<CartItems />} />
+        <Route path="cartArea" element={<CartItems />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="PaymentBox" element={<PaymentBox />} />
