@@ -16,7 +16,7 @@ const Sidebar = () => {
   const [money, setMoney] = useState(50);
 
   const handleOnAddData = () => {
-    dispatch(customerAction.setAddDataComponentToTrue())
+    dispatch(customerAction.setAddDataComponentToTrue(true))
     navigate("/AddProduct")
   }
   
