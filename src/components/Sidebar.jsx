@@ -86,7 +86,7 @@ const Sidebar = () => {
           </div>
         </li>
         {userDetails && <li className={styles.list} onClick={handleOnLogOut}><h3>log Out</h3></li>}
-        {userDetails && userDetails.userType && <li className={styles.list} onClick={handleOnAddData}><h3>Add Data</h3></li>}
+        {userDetails && userDetails.userType === "admin" && <li className={styles.list} onClick={handleOnAddData}><h3>Add Data</h3></li>}
         
       </ul>
     </div>
