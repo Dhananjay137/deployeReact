@@ -36,7 +36,7 @@ const Sidebar = () => {
   };
   const handleGoToOrder = () => {
     if (userDetails) {
-      dispatch(getAllOrderByUserId(userDetails.userId));
+      
       navigate("/Order");
     } else {
       navigate("/login");
