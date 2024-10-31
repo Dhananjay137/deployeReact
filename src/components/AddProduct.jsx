@@ -16,12 +16,8 @@ const AddProduct = () => {
   const {userDetails, isAddDataComponent} = useSelector(state => state.customer)
 
   useEffect(() => {
-    console.log("out of if")
-    console.log("isadd : ",isAddDataComponent)
-    console.log("n",!isAddDataComponent)
     if(!isAddDataComponent){
       navigate("/")
-      console.log("in if")
     }
   },[isAddDataComponent])
 

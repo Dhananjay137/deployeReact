@@ -20,14 +20,15 @@ const OrderItems = () => {
       navigate("/login")
     }
     else{
-      dispatch(fetchAction.setUpdating(true))
-      dispatch(getAllOrderByUserId(userDetails.userId))
-      .finally(() => {
-        dispatch(fetchAction.setUpdating(false))
-      })
-      
+      if(orderList.length === 0) {
+        dispatch(fetchAction.setUpdating(true))
+        dispatch(getAllOrderByUserId(userDetails.userId))
+        .finally(() => {
+          dispatch(fetchAction.setUpdating(false))
+        })
+      }
     }
-  },[])
+  },[userDetails])
   return (<>
   {isUpdating ? <Loading/> : 
   <>
