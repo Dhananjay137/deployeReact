@@ -16,7 +16,6 @@ const AddProduct = () => {
   const {userDetails, isAddDataComponent} = useSelector(state => state.customer)
 
   const handleOnSubmit = (event) => {
-    const navigate = useNavigate();
     event.preventDefault();
 
     useEffect(() => {
