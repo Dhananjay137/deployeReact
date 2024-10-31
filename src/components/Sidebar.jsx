@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFilterResult, searchAction } from "../store/search";
 import { Link, useNavigate } from "react-router-dom";
-import { getAllOrderByUserId } from "../store/order";
 import styles from "./Sidebar.module.css"
-import { fetchAction } from "../store/fetch";
 import { customerAction } from "../store/customer";
 
 const Sidebar = () => {

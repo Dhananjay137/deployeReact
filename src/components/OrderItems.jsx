@@ -19,7 +19,6 @@ const OrderItems = () => {
     if (!storedUserId) {
       navigate("/login");
     } else {
-      console.log("hii")
       dispatch(fetchAction.setUpdating(true));
       dispatch(getAllOrderByUserId(storedUserId)).finally(() => {
         dispatch(fetchAction.setUpdating(false));

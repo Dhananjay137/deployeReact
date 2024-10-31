@@ -28,15 +28,6 @@ const CartItems = () => {
   }, [userDetails]);
 
   const handleRemoveFromCart = async (ID) => {
-    console.log(ID);
-
-    // dispatch(fetchAction.setUpdating(true))
-    // dispatch(cartAction.removeFromCart({ ID: ID }))
-
-    //   // After removing and fetching, reset itemRemove state
-    //   dispatch(getToCartAsync(userDetails.userId));
-    //   dispatch(fetchAction.setUpdating(false))
-
     try {
       // Show loading state
       dispatch(fetchAction.setUpdating(true));
