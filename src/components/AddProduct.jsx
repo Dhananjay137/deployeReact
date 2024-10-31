@@ -22,7 +22,7 @@ const AddProduct = () => {
       navigate("/")
       console.log("in if")
     }
-  },[])
+  },[isAddDataComponent])
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
