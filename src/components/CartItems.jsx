@@ -11,7 +11,7 @@ import { orderAction } from "../store/order";
 const CartItems = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { userDetails } = useSelector((state) => state.customer);
-  const {isUpdating} = useSelector(state => state.fetch)
+  const { isUpdating } = useSelector((state) => state.fetch);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -19,22 +19,19 @@ const CartItems = () => {
     if (userDetails) {
       navigate("/login");
     } else {
-      if(cartItems.length === 0) {
-        dispatch(fetchAction.setUpdating(true));
-        dispatch(getToCartAsync(userDetails.userId))
-        .finally(() => {
-          dispatch(fetchAction.setUpdating(false))
-        })
-      }
+      dispatch(fetchAction.setUpdating(true));
+      dispatch(getToCartAsync(userDetails.userId)).finally(() => {
+        dispatch(fetchAction.setUpdating(false));
+      });
     }
-  }, [dispatch,navigate,userDetails]);
+  }, [dispatch, navigate, userDetails]);
 
   const handleRemoveFromCart = async (ID) => {
-    console.log(ID)
-    
+    console.log(ID);
+
     // dispatch(fetchAction.setUpdating(true))
     // dispatch(cartAction.removeFromCart({ ID: ID }))
-  
+
     //   // After removing and fetching, reset itemRemove state
     //   dispatch(getToCartAsync(userDetails.userId));
     //   dispatch(fetchAction.setUpdating(false))
@@ -54,16 +51,16 @@ const CartItems = () => {
       // Reset loading state
       dispatch(fetchAction.setUpdating(false));
     }
-
   };
   const handleOnBuy = async (productId, quantity) => {
     if (userDetails) {
       try {
+        dispatch(fetchAction.setUpdating(true));
 
-        dispatch(fetchAction.setUpdating(true))
-        
         // Fetch Braintree client token from backend
-        const response = await fetch("https://deployespringboot.onrender.com/api/payment/token");
+        const response = await fetch(
+          "https://deployespringboot.onrender.com/api/payment/token"
+        );
         const token = await response.text();
 
         // Fetch Product Details from backend
@@ -85,7 +82,7 @@ const CartItems = () => {
         navigate("/PaymentBox");
       } catch (error) {
         console.error("Error fetching Braintree token:", error);
-        dispatch(fetchAction.setUpdating(false))
+        dispatch(fetchAction.setUpdating(false));
       }
     } else {
       navigate("/login");
@@ -94,21 +91,23 @@ const CartItems = () => {
 
   return (
     <>
-    {isUpdating ? <Loading/> : 
+      {isUpdating ? (
+        <Loading />
+      ) : (
         <>
-        {cartItems.length === 0 && <CartEmpty/> }
-        <div className="item-list">
-          {cartItems.map((cartItem) => (
-            <CartItem
-              key={cartItem.cartId}
-              item={cartItem}
-              handleRemoveFromCart={handleRemoveFromCart}
-              handleOnBuy = {handleOnBuy}
-            />
-          ))}
-        </div>
+          {cartItems.length === 0 && <CartEmpty />}
+          <div className="item-list">
+            {cartItems.map((cartItem) => (
+              <CartItem
+                key={cartItem.cartId}
+                item={cartItem}
+                handleRemoveFromCart={handleRemoveFromCart}
+                handleOnBuy={handleOnBuy}
+              />
+            ))}
+          </div>
         </>
-    } 
+      )}
     </>
   );
 };

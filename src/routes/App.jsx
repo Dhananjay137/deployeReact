@@ -12,7 +12,6 @@ function App() {
   const dispatch = useDispatch();
   const userId = localStorage.getItem("userId");
   useEffect(() => {
-    console.log("home")
     if (userId) {
       const userId = localStorage.getItem("userId");
       const fName = localStorage.getItem("fName");
