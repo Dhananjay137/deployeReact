@@ -16,15 +16,16 @@ const CartItems = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!userDetails) {
+    const storedUserId = localStorage.getItem('userId')
+    if (!storedUserId) {
       navigate("/login");
     } else {
       dispatch(fetchAction.setUpdating(true));
-      dispatch(getToCartAsync(userDetails.userId)).finally(() => {
+      dispatch(getToCartAsync(storedUserId)).finally(() => {
         dispatch(fetchAction.setUpdating(false));
       });
     }
-  }, [userDetails]);
+  }, [userDetails,storedUserId]);
 
   const handleRemoveFromCart = async (ID) => {
     console.log(ID);

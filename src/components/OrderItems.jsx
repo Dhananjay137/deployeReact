@@ -17,12 +17,13 @@ const OrderItems = () => {
   useEffect(() => {
     // checking
     console.log(userDetails);
-    if (!userDetails) {
+    const storedUserId = localStorage.getItem('userId')
+    if (!storedUserId) {
       navigate("/login");
     } else {
       console.log("hii")
       dispatch(fetchAction.setUpdating(true));
-      dispatch(getAllOrderByUserId(userDetails.userId)).finally(() => {
+      dispatch(getAllOrderByUserId(storedUserId)).finally(() => {
         dispatch(fetchAction.setUpdating(false));
       });
     }
