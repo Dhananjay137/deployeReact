@@ -15,11 +15,12 @@ const OrderItems = () => {
   const navigate = useNavigate()
   
   useEffect(() => { // checking 
-    if(!userDetails){
+    const storedUserId = localStorage.getItem('userId')
+    if(!storedUserId){
       navigate("/login")
     }
     else{
-      const storedUserId = localStorage.getItem('userId')
+      console.log(storedUserId)
       dispatch(fetchAction.setUpdating(true))
       dispatch(getAllOrderByUserId(storedUserId))
       .finally(() => {
