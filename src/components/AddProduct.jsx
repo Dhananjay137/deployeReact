@@ -18,7 +18,7 @@ const AddProduct = () => {
   useEffect(() => {
     console.log("out of if")
     if(!isAddDataComponent){
-      navigate("/AddProduct")
+      navigate("/")
       console.log("in if")
     }
   },[])
