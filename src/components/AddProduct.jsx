@@ -21,7 +21,7 @@ const AddProduct = () => {
       navigate("/AddProduct")
       console.log("in if")
     }
-  })
+  },[])
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
