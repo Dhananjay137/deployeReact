@@ -63,7 +63,7 @@ const customerSlice = createSlice({
     },
     buyItem: (state, action) => {
     },
-    setAddDataComponentToTrue: (state) => {
+    setAddDataComponentToTrue: () => {
       state.isAddDataComponent = true
     },
     sessionDataStore: (state, action) => {
