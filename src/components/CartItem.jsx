@@ -42,8 +42,7 @@ const CartItem = ({ item ,handleRemoveFromCart, handleOnBuy}) => {
   <img src={item.imagePath} alt="image" className="item-image" />
   <p>Name: {item.productName}</p>
   <p>Prize: ${item.price}</p>
-  <strong style={{color: "green"}}>In stock</strong>
-
+  {item.quantity >= 1 && <strong style={{color: "green"}}>In stock</strong>}
   <div>
     <hr />
     {item.quantity < 1 ? (
