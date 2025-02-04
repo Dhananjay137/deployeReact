@@ -1,17 +1,26 @@
-import styles from "./Footer.module.css"
+import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className="footerSection">
+      <div className={styles.footerSection}>
         <h4>Connect With Me</h4>
         <ul>
-          <li><a className={styles.linkStyle} href="https://github.com/Dhananjay137" target="_blank">GitHub</a></li>
-          <li><a className={styles.linkStyle} href="mailto:dhananjayrathod006@gmail.com">Email</a></li>
+          <li>
+            <a className={styles.linkStyle} href="https://github.com/Dhananjay137" target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a className={styles.linkStyle} href="mailto:dhananjayrathod006@gmail.com">
+              Email
+            </a>
+          </li>
         </ul>
       </div>
-      <div className="footerSection">
+
+      <div className={styles.footerSection}>
         <h4>Used Technology</h4>
         <ul>
           <li>React (HTML | CSS | JS)</li>
@@ -24,11 +33,15 @@ const Footer = () => {
           <li>Postman</li>
         </ul>
       </div>
-      <div className="footerSection">
+
+      <div className={styles.footerSection}>
         <h4>Let Us Help You</h4>
         <ul>
-          <li><Link to="/register" className={styles.linkStyle}>Create Account</Link></li>
-          {/* <li>Help</li> */}
+          <li>
+            <Link to="/register" className={styles.linkStyle}>
+              Create Account
+            </Link>
+          </li>
         </ul>
       </div>
     </footer>

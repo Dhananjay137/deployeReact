@@ -2,12 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchSearchResults, searchAction } from "../store/search";
 import { Link, useNavigate } from "react-router-dom";
-import { getToCartAsync } from "../store/cart";
 import styles from "./HeaderMenu.module.css"
 import { IoCartOutline } from "react-icons/io5";
 import { VscAccount } from "react-icons/vsc";
 import { FiSearch } from "react-icons/fi";
-import { fetchAction } from "../store/fetch";
+
 
 const HeaderMenu = () => {
   const [isUpdate, setUpdate] = useState(false)

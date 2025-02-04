@@ -1,20 +1,55 @@
 .footer {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  padding: 10px 50px 10px 50px;
+  align-items: center;
+  padding: 15px 50px;
   background-color: rgb(18, 36, 62);
   color: rgb(236, 236, 236);
-  ul {
-    list-style-type: none;
-    padding-left: 0; /* Optional: Remove default padding */
-    margin: 0; /* Optional: Remove default margin */
+  text-align: center;
+}
+
+.footerSection {
+  flex: 1;
+  min-width: 250px; /* Ensures sections stack on smaller screens */
+  margin: 10px;
+}
+
+h4 {
+  margin-bottom: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  margin: 5px 0;
+  color: rgb(209, 208, 208);
+}
+
+.linkStyle {
+  text-decoration: none;
+  color: rgb(209, 208, 208);
+  transition: color 0.3s ease-in-out;
+}
+
+.linkStyle:hover {
+  color: rgb(255, 255, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
   }
-  li{
-    margin: 3px 5px 0px 0px;
-    color:rgb(209, 208, 208);
-  }
-  .linkStyle{
-    margin: 3px 5px 0px 0px;
-    color:rgb(209, 208, 208);
+
+  .footerSection {
+    width: 100%;
+    margin: 10px 0;
   }
 }
