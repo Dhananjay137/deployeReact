@@ -38,3 +38,12 @@
   margin-right: 20px;
   font-weight: 400;
 }
+@media (max-width: 768px) {
+  .menu{
+    width: 100vw;
+    justify-content: center;
+    input{
+      width: auto;
+    }
+  }
+}

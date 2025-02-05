@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Logo />
-      <HeaderMenu />
+      <HeaderMenu className={styles.headerMenu}/>
     </header>
   );
 };

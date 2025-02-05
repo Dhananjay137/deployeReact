@@ -3,3 +3,8 @@
   text-align: center;
   color: rgb(8, 18, 43);
 }
+@media (max-width: 786px) {
+  .webTitle{
+    display: none;
+  }
+}

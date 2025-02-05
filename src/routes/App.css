@@ -1,8 +1,7 @@
-body{
+*{
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  
 }
 .box{
   display: flex;
@@ -17,7 +16,11 @@ body{
   display: flex;
   height: auto;
   min-height: 90vh;
-  
+}
+@media (max-width: 768px) {
+  .mainBox2{
+    flex-direction: column;
+  }
 }
 
 .custom-link{
@@ -57,8 +60,8 @@ body{
   }
 }
 .item-image{
-  height: 100px;
-  width: 100px;
+  max-width: 100px;
+  max-width: 100px;
 }
 .item-card-btn{
   border: none;

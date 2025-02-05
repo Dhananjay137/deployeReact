@@ -40,7 +40,7 @@ const HeaderMenu = () => {
   return (
     <div className={styles.menu}>
       <div className={styles.c}>
-        <input type="text" placeholder="Search by Category" ref={inputItem}/>
+        <input className={styles.serchBox} type="text" placeholder="Search by Category" ref={inputItem}/>
         <button onClick={handleOnclick}><FiSearch color="rgb(8, 18, 43)"/></button>
       </div>
       <strong className={styles.c}><Link to="/login" className="custom-link"><VscAccount color="rgb(8, 18, 43)"/></Link></strong>

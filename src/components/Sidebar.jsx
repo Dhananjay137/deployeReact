@@ -53,6 +53,7 @@ const Sidebar = () => {
       localStorage.removeItem("phoneNo");
       dispatch(customerAction.setUserEmpty())
     }
+    
   }
   return (
     <div className={styles.sidebar}>
