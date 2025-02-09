@@ -40,12 +40,14 @@
 @media (max-width: 768px) {
   .sidebarList{
     flex-direction: row;
-    width: 100%;
+    width: 400px;
     overflow-x: auto; /* Use overflow-x instead of overflow-y */
     white-space: nowrap; /* Prevent wrapping */
   }
   .sidebar{
-    width: 100vw; /* Ensure the sidebar takes the full width */
+    width: auto; /* Ensure the sidebar takes the full width */
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
   }
   .list {

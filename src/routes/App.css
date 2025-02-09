@@ -14,6 +14,7 @@
 
 .mainBox2{
   display: flex;
+  background-color: rgb(209, 203, 203);
   height: auto;
   min-height: 90vh;
 }
@@ -31,7 +32,6 @@
 
 .outlets{
   width: 100%;
-  background-color: rgb(209, 203, 203);
   padding: 2px;
 }
 .item-list{
@@ -39,30 +39,49 @@
   flex-wrap: wrap;
   flex-direction: row;
 }
-.item-card{
+/* Base styles for mobile/small screens */
+.item-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* height: 350px; */
-  height: auto;
-  width: 240px;
+  width: 90%;         /* Fluid width for small screens */
+  max-width: 240px;   /* Maximum width ensures it never grows too wide */
+  margin: 7px auto;   /* Center the card with auto side margins */
   padding: 5px;
   border: 2px solid white;
   border-radius: 5px;
   font-size: 20px;
   background-color: white;
-  
-  margin: 7px ;
-  p{
-    margin: 6px 0;
-    font-size: 1rem;
+  height: auto;
+}
+
+/* Nested paragraph styles (if using plain CSS, keep this separate) */
+.item-card p {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+
+.item-image {
+  max-width: 100px;
+  width: 100%;  /* Allow the image to scale down with its container */
+}
+
+/* Medium devices (e.g., tablets) */
+@media screen and (min-width: 600px) {
+  .item-card {
+    width: 45%;      /* Example: use a percentage width for multiple items per row */
+    margin: 7px;     /* You can adjust margin or layout as needed */
   }
 }
-.item-image{
-  max-width: 100px;
-  max-width: 100px;
+
+/* Large devices (e.g., desktops) */
+@media screen and (min-width: 1024px) {
+  .item-card {
+    width: 240px;    /* Fixed width for consistency on larger screens */
+  }
 }
+
 .item-card-btn{
   border: none;
   border-radius: 5px;
